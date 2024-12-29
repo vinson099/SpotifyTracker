@@ -3,16 +3,8 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth, SpotifyClientCredentials
 from dotenv import load_dotenv
 
-app = Flask(__name__)
 
-@app.route('/')
-def home():
-    return "hello world"
-
-if __name__ == '__main__':
-    app.run(debug=True)
-
-# imports environment variables such as keys
+# imports environment variables_ such as keys
 load_dotenv()
 
 scope = "user-top-read"
@@ -77,6 +69,6 @@ def get_top_genres():
     return list(sorted_dict.keys())[:5]
 
     
-# print(get_top_songs())
-# print(get_top_artists())
-# print(get_top_genres())
+print(get_top_songs())
+print(get_top_artists())
+print(get_top_genres())
