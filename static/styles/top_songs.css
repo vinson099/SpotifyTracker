@@ -1,0 +1,39 @@
+.page_title {
+    text-align: center;
+    margin-top: 20px;
+}
+.tabs {
+    display: flex;
+    justify-content: center; /* Center the tabs */
+    margin-bottom: 20px; /* Add some space below the tabs */
+    padding: 0 2rem; /* Add some padding to the tabs */
+}
+
+.tablink {
+    background-color: #f1f1f1;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 5px; /* Add some space between the buttons */
+    border-radius: 5px;
+}
+
+.tablink.active {
+    background-color: #ccc;
+}
+
+.track_list {
+    gap: 20px; /* Add some space between the tracks */
+    color: #ffffff; /* Text Color */
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+    border: 5px solid #545454;
+    border-radius: 5px;
+}
+
+.tabcontent h3 {
+    text-align: center; /* Center the subheading text */
+}

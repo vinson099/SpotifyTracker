@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Tracks</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/top_songs.css') }}">
+</head>
+<body>
+    <h1 class = "page_title">Top Tracks</h1>
+    <div class="tabs">
+        <button class="tablink" onclick="openTab(event, 'ShortTerm')">Short Term</button>
+        <button class="tablink" onclick="openTab(event, 'MediumTerm')">Medium Term</button>
+        <button class="tablink" onclick="openTab(event, 'LongTerm')">Long Term</button>
+    </div>
+
+    <div id="ShortTerm" class="tabcontent">
+        <h3>Short Term</h3>
+        <ul class = "track_list">
+            {% for track in short_term_tracks %}
+                <li>{{ track.name }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div id="MediumTerm" class="tabcontent">
+        <h3>Medium Term</h3>
+        <ul class = "track_list">>
+            {% for track in medium_term_tracks %}
+                <li>{{ track.name }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div id="LongTerm" class="tabcontent">
+        <h3>Long Term</h3>
+        <ul class = "track_list">>
+            {% for track in long_term_tracks %}
+                <li>{{ track.name }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Open the default tab
+        document.getElementsByClassName('tablink')[0].click();
+    </script>
+</body>
+</html>
+{% endblock %}
