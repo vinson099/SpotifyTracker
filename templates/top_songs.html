@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/top_songs.css') }}">
 </head>
 <body>
-    <h1 class = "page_title">Top Tracks</h1>
+    <h1 class = "page_title">Top Tracks From...</h1>
     <div class="tabs">
-        <button class="tablink" onclick="openTab(event, 'ShortTerm')">Short Term</button>
-        <button class="tablink" onclick="openTab(event, 'MediumTerm')">Medium Term</button>
-        <button class="tablink" onclick="openTab(event, 'LongTerm')">Long Term</button>
+        <button class="tablink" onclick="openTab(event, 'ShortTerm')">Last 4 Weeks</button>
+        <button class="tablink" onclick="openTab(event, 'MediumTerm')">Last 6 Months</button>
+        <button class="tablink" onclick="openTab(event, 'LongTerm')">Last 12 Weeks</button>
     </div>
 
     <div id="ShortTerm" class="tabcontent">
