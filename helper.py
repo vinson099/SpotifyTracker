@@ -20,7 +20,7 @@ def get_top_songs_short():
     d = [None] * 50
     
     for i, item in enumerate(top_songs['items']):
-        d[i] = item['name']
+        d[i] = item
         
     return d
 
@@ -29,7 +29,7 @@ def get_top_songs_medium():
     d = [None] * 50
     
     for i, item in enumerate(top_songs['items']):
-        d[i] = item['name']
+        d[i] = item
         
     return d
 
@@ -38,7 +38,7 @@ def get_top_songs_long():
     d = [None] * 50
     
     for i, item in enumerate(top_songs['items']):
-        d[i] = item['name']
+        d[i] = item
         
     return d
 
@@ -135,5 +135,3 @@ def get_top_genres_long():
                 d[genre] = 1
                 
 
-short_songs = get_top_songs_short()
-print(short_songs)

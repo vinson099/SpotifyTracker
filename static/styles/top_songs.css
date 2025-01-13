@@ -10,30 +10,67 @@
 }
 
 .tablink {
-    background-color: #f1f1f1;
+    background-color: #b3b3b3;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    margin: 0 5px; /* Add some space between the buttons */
+    margin: 0 2rem; /* Add some space between the buttons */
     border-radius: 5px;
 }
 
 .tablink.active {
-    background-color: #ccc;
+    background-color: #1ED760;
 }
 
 .track_list {
-    gap: 20px; /* Add some space between the tracks */
     color: #ffffff; /* Text Color */
 }
 
 .tabcontent {
     display: none;
     padding: 20px;
-    border: 5px solid #545454;
-    border-radius: 5px;
+    border-top: 2px solid #545454;
+    margin: 0 auto; /* Center the tab content */
+    width: 63rem; /* Set a maximum width for the content */
 }
 
-.tabcontent h3 {
-    text-align: center; /* Center the subheading text */
+.track-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.album-art {
+    width: 50px; /* Set the width of the album art */
+    height: 50px; /* Set the height of the album art */
+    margin-right: 10px; /* Add some space between the image and the text */
+    vertical-align: middle; /* Align the image vertically with the text */
+}
+
+
+.placement {
+    font-size: 1rem; 
+    font-weight: normal;
+    padding-right: 20px;
+    text-align: right;
+}
+
+.track-name {
+    width: 400px; /* Set a fixed width for the song name */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add ellipsis if the text overflows */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.artist-name {
+    padding-left: 50px; /* Add some space between the song name and artist name */
+    color: #b3b3b3;
+    width: 400px; /* Set a fixed width for the artist name */
+}
+
+.duration {
+    padding-left: 20px; 
+    color: #b3b3b3;
+    text-align: right;
+    margin-left: auto;
 }

@@ -1,4 +1,14 @@
 {% extends 'base.html' %}
-
 {% block content %}
+<head>
+    <title>Spotify Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/home.css') }}">
+</head>
+<body>
+    <h1 class = "page_title">Welcome to Spotify Tracker</h1>
+    <p class = "description">This web app allows you to track your Spotify listening habits. 
+        You can view your top tracks and artists, as well as see how your listening habits 
+        compare to your friends.</p>
+</body>
+
 {% endblock %}

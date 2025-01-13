@@ -4,8 +4,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Top Tracks</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/top_songs.css') }}">
 </head>
@@ -18,30 +16,63 @@
     </div>
 
     <div id="ShortTerm" class="tabcontent">
-        <h3>Short Term</h3>
-        <ul class = "track_list">
-            {% for track in short_term_tracks %}
-                <li>{{ track.name }}</li>
-            {% endfor %}
-        </ul>
+        <table class="track_table">
+            <tbody>
+                {% for track in short_term_tracks %}
+                <tr>
+                    <td class="placement">{{ loop.index }}</td>
+                    <td><img src="{{ track.album.images[0].url }}" alt="{{ track.name }} album art" class="album-art" loading="lazy"></td>
+                    <td class="track-name">{{ track.name }}</td>
+                    <td class="artist-name">
+                        {% for artist in track.artists %}
+                            {{ artist.name }}{% if not loop.last %}, {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td class="duration">{{ track.duration_ms|format_duration }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
 
     <div id="MediumTerm" class="tabcontent">
-        <h3>Medium Term</h3>
-        <ul class = "track_list">>
-            {% for track in medium_term_tracks %}
-                <li>{{ track.name }}</li>
-            {% endfor %}
-        </ul>
+        <table class="track_table">
+            <tbody>
+                {% for track in medium_term_tracks %}
+                <tr>
+                    <td class="placement">{{ loop.index }}</td>
+                    <td><img src="{{ track.album.images[0].url }}" alt="{{ track.name }} album art" class="album-art" loading="lazy"></td>
+                    <td class="track-name">{{ track.name }}</td>
+                    <td class="artist-name">
+                        {% for artist in track.artists %}
+                            {{ artist.name }}{% if not loop.last %}, {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td class="duration">{{ track.duration_ms|format_duration }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
 
     <div id="LongTerm" class="tabcontent">
-        <h3>Long Term</h3>
-        <ul class = "track_list">>
-            {% for track in long_term_tracks %}
-                <li>{{ track.name }}</li>
-            {% endfor %}
-        </ul>
+        <table class="track_table">
+            <tbody>
+                {% for track in long_term_tracks %}
+                <tr>
+                    <td class="placement">{{ loop.index }}</td>
+                    <td><img src="{{ track.album.images[0].url }}" alt="{{ track.name }} album art" class="album-art" loading="lazy"></td>
+                    <td class="track-name">{{ track.name }}</td>
+                    <td class="artist-name">
+                        {% for artist in track.artists %}
+                            {{ artist.name }}{% if not loop.last %}, {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td class="duration">{{ track.duration_ms|format_duration }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
 
     <script>
