@@ -64,7 +64,7 @@ def get_top_artists_short():
     d = [None] * 50
     
     for i, item in enumerate(top_artists['items']):
-        d[i] = item['name']
+        d[i] = item
         
     return d
 
@@ -73,7 +73,7 @@ def get_top_artists_medium():
     d = [None] * 50
     
     for i, item in enumerate(top_artists['items']):
-        d[i] = item['name']
+        d[i] = item
         
     return d
 
@@ -82,7 +82,7 @@ def get_top_artists_long():
     d = [None] * 50
     
     for i, item in enumerate(top_artists['items']):
-        d[i] = item['name']
+        d[i] = item
         
     return d
 

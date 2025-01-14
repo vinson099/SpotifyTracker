@@ -15,7 +15,10 @@ def home():
     short_term_tracks = helper.get_top_songs_short()
     medium_term_tracks = helper.get_top_songs_medium()
     long_term_tracks = helper.get_top_songs_long()
-    return render_template('top_songs.html', short_term_tracks=short_term_tracks, medium_term_tracks=medium_term_tracks, long_term_tracks=long_term_tracks)
+    return render_template('top_songs.html', 
+                           short_term_tracks=short_term_tracks, 
+                           medium_term_tracks=medium_term_tracks, 
+                           long_term_tracks=long_term_tracks)
 
 
 # Route for the Top Songs page
@@ -24,12 +27,21 @@ def top_songs():
     short_term_tracks = helper.get_top_songs_short()
     medium_term_tracks = helper.get_top_songs_medium()
     long_term_tracks = helper.get_top_songs_long()
-    return render_template('top_songs.html', short_term_tracks=short_term_tracks, medium_term_tracks=medium_term_tracks, long_term_tracks=long_term_tracks)
+    return render_template('top_songs.html', 
+                           short_term_tracks=short_term_tracks, 
+                           medium_term_tracks=medium_term_tracks, 
+                           long_term_tracks=long_term_tracks)
 
 # Route for the Top Artists page
-@app.route('/top-artists')
+@app.route('/top_artists')
 def top_artists():
-    return render_template('top_artists.html')
+    short_term_artists = helper.get_top_artists_short()
+    medium_term_artists = helper.get_top_artists_medium()
+    long_term_artists = helper.get_top_artists_long()
+    return render_template('top_artists.html', 
+                           short_term_artists=short_term_artists, 
+                           medium_term_artists=medium_term_artists, 
+                           long_term_artists=long_term_artists)
 
 # Route for the Top Genres page
 @app.route('/top-genres')

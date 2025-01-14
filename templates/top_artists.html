@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Top Artists</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/top_artists.css') }}">
+</head>
+<body>
+    <h1 class = "page-title">Top Artists From...</h1>
+    <div class="tabs">
+        <button class="tablink" onclick="openTab(event, 'ShortTerm')">Last 4 Weeks</button>
+        <button class="tablink" onclick="openTab(event, 'MediumTerm')">Last 6 Months</button>
+        <button class="tablink" onclick="openTab(event, 'LongTerm')">Last 12 Weeks</button>
+    </div>
+
+    
+
+    <div id="ShortTerm" class="tabcontent">
+        <h2 class="header2">Top 5 Artists:</h2>
+        <div class="top-five"> <!-- Container for the top 5 artists -->
+            {% for artist in short_term_artists[:5] %}  <!-- Slice the list to get top 5 artists -->
+            <div class="artist"> <!-- Display image, ranking, name, and popularity score in a column -->
+                <img src="{{ artist.images[0].url }}" alt="{{ artist.name }} artist image" class="artist-image" loading="lazy">
+                <p class="artist-name">{{ loop.index }}. {{ artist.name }}</p>
+                <p class="artist-popularity">Popularity Score: {{ artist.popularity }}/100</p>
+            </div>
+                {% endfor %}
+        </div>
+
+        <div class="artist-list"> <!-- Container for the rest of the artists -->
+    </div>
+
+    <div id="MediumTerm" class="tabcontent">
+        <h2 class="header2">Top 5 Artists:</h2>
+        <div class="top_five">
+            {% for artist in medium_term_artists[:5] %}
+            <div class="artist">
+                <img src="{{ artist.images[0].url }}" alt="{{ artist.name }} artist image" class="artist-image" loading="lazy">
+                <p class="artist-name">{{ loop.index }}. {{ artist.name }}</p>
+                <p class="artist-popularity">Popularity Score: {{ artist.popularity }}/100</p>
+            </div>
+                {% endfor %}
+            </div>
+    </div>
+
+    <div id="LongTerm" class="tabcontent">
+        <h2 class="header2">Top 5 Artists:</h2>
+        <div class="top_five">
+            {% for artist in long_term_artists[:5] %}
+            <div class="artist">
+                <img src="{{ artist.images[0].url }}" alt="{{ artist.name }} artist image" class="artist-image" loading="lazy">
+                <p class="artist-name">{{ loop.index }}. {{ artist.name }}</p>
+                <p class="artist-popularity">Popularity Score: {{ artist.popularity }}/100</p>
+            </div>
+                {% endfor %}
+            </div>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Open the default tab
+        document.getElementsByClassName('tablink')[0].click();
+    </script>
+</body>
+</html>
+{% endblock %}
