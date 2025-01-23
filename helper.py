@@ -60,7 +60,7 @@ def get_top_songs_long():
 
 # get the top artists for each time range 
 def get_top_artists_short():     
-    top_artists = user_sp.current_user_top_artists(limit=10, time_range='short_term')
+    top_artists = user_sp.current_user_top_artists(limit=50, time_range='short_term')
     d = [None] * 50
     
     for i, item in enumerate(top_artists['items']):
@@ -69,7 +69,7 @@ def get_top_artists_short():
     return d
 
 def get_top_artists_medium():
-    top_artists = user_sp.current_user_top_artists(limit=10, time_range='medium_term')
+    top_artists = user_sp.current_user_top_artists(limit=50, time_range='medium_term')
     d = [None] * 50
     
     for i, item in enumerate(top_artists['items']):
@@ -78,7 +78,7 @@ def get_top_artists_medium():
     return d
 
 def get_top_artists_long():
-    top_artists = user_sp.current_user_top_artists(limit=10, time_range='long_term')
+    top_artists = user_sp.current_user_top_artists(limit=50, time_range='long_term')
     d = [None] * 50
     
     for i, item in enumerate(top_artists['items']):

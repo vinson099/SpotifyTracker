@@ -18,44 +18,39 @@
     
 
     <div id="ShortTerm" class="tabcontent">
-        <h2 class="header2">Top 5 Artists:</h2>
-        <div class="top-five"> <!-- Container for the top 5 artists -->
-            {% for artist in short_term_artists[:5] %}  <!-- Slice the list to get top 5 artists -->
+        <div class="artist-list"> <!-- Container for the rest of the artists -->
+            {% for artist in short_term_artists %} 
             <div class="artist"> <!-- Display image, ranking, name, and popularity score in a column -->
                 <img src="{{ artist.images[0].url }}" alt="{{ artist.name }} artist image" class="artist-image" loading="lazy">
-                <p class="artist-name">{{ loop.index }}. {{ artist.name }}</p>
+                <p class="artist-name">{{ loop.index}}. {{ artist.name }}</p>
                 <p class="artist-popularity">Popularity Score: {{ artist.popularity }}/100</p>
             </div>
-                {% endfor %}
+            {% endfor %}
         </div>
-
-        <div class="artist-list"> <!-- Container for the rest of the artists -->
     </div>
 
     <div id="MediumTerm" class="tabcontent">
-        <h2 class="header2">Top 5 Artists:</h2>
-        <div class="top_five">
-            {% for artist in medium_term_artists[:5] %}
-            <div class="artist">
+        <div class="artist-list"> <!-- Container for the rest of the artists -->
+            {% for artist in medium_term_artists %} 
+            <div class="artist"> <!-- Display image, ranking, name, and popularity score in a column -->
                 <img src="{{ artist.images[0].url }}" alt="{{ artist.name }} artist image" class="artist-image" loading="lazy">
-                <p class="artist-name">{{ loop.index }}. {{ artist.name }}</p>
+                <p class="artist-name">{{ loop.index}}. {{ artist.name }}</p>
                 <p class="artist-popularity">Popularity Score: {{ artist.popularity }}/100</p>
             </div>
-                {% endfor %}
-            </div>
+            {% endfor %}
+        </div>
     </div>
 
     <div id="LongTerm" class="tabcontent">
-        <h2 class="header2">Top 5 Artists:</h2>
-        <div class="top_five">
-            {% for artist in long_term_artists[:5] %}
-            <div class="artist">
+        <div class="artist-list"> <!-- Container for the rest of the artists -->
+            {% for artist in long_term_artists %} 
+            <div class="artist"> <!-- Display image, ranking, name, and popularity score in a column -->
                 <img src="{{ artist.images[0].url }}" alt="{{ artist.name }} artist image" class="artist-image" loading="lazy">
-                <p class="artist-name">{{ loop.index }}. {{ artist.name }}</p>
+                <p class="artist-name">{{ loop.index}}. {{ artist.name }}</p>
                 <p class="artist-popularity">Popularity Score: {{ artist.popularity }}/100</p>
             </div>
-                {% endfor %}
-            </div>
+            {% endfor %}
+        </div>
     </div>
 
     <script>

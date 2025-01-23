@@ -42,6 +42,14 @@
     justify-content: space-between;
 }
 
+.placement {
+    font-size: 1rem; 
+    font-weight: normal;
+    padding-right: 20px;
+    padding-left: 4rem;
+    text-align: right;
+}
+
 .album-art {
     width: 50px; /* Set the width of the album art */
     height: 50px; /* Set the height of the album art */
@@ -49,16 +57,9 @@
     vertical-align: middle; /* Align the image vertically with the text */
 }
 
-
-.placement {
-    font-size: 1rem; 
-    font-weight: normal;
-    padding-right: 20px;
-    text-align: right;
-}
-
 .track-name {
-    width: 450px; /* Set a fixed width for the song name */
+    width: 400px; /* Set a fixed width for the song name */
+    max-width: 400px; /* Set a fixed width for the artist name */
     overflow: hidden;
     text-overflow: ellipsis; /* Add ellipsis if the text overflows */
     white-space: nowrap; /* Prevent text from wrapping */
@@ -67,11 +68,12 @@
 .artist-name {
     padding-left: 50px; /* Add some space between the song name and artist name */
     color: #b3b3b3;
-    width: 500px; /* Set a fixed width for the artist name */
+    width: 400px; /* Set a fixed width for the artist name */
+    max-width: 400px; /* Set a fixed width for the artist name */
 }
 
 .duration {
-    padding-left: 30px; 
+    padding-left: 3.5rem;
     color: #b3b3b3;
     text-align: right;
     margin-left: auto;
