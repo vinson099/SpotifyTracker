@@ -10,7 +10,7 @@
 }
 
 .tablink {
-    background-color: rgb(50, 48, 48);
+    background-color: #323030;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
@@ -31,9 +31,11 @@
 .tabcontent {
     display: none;
     padding: 20px;
-    border-top: 2px solid #545454;
+    background-color: #323030;
+    border-radius: 35px;
+    padding-top: 45px;
     margin: 0 auto; /* Center the tab content */
-    width: 75rem; /* Set a maximum width for the content */
+    width: 71rem; /* Set a maximum width for the content */
 }
 
 .track-row {
@@ -46,7 +48,7 @@
     font-size: 1rem; 
     font-weight: normal;
     padding-right: 20px;
-    padding-left: 4rem;
+    padding-left: 2rem;
     text-align: right;
 }
 
@@ -55,6 +57,7 @@
     height: 50px; /* Set the height of the album art */
     margin-right: 10px; /* Add some space between the image and the text */
     vertical-align: middle; /* Align the image vertically with the text */
+    padding-bottom: 8px;
 }
 
 .track-name {

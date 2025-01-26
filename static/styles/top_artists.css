@@ -28,9 +28,10 @@
 .tabcontent {
     display: none;
     padding: 20px;
-    border-top: 4px solid #545454;
     margin: 0 auto; /* Center the tab content */
-    width: 75rem; /* Set a maximum width for the content */
+    width: 71rem; /* Set a maximum width for the content */
+    background-color: #323030;
+    border-radius: 35px;
 }
 
 
@@ -44,7 +45,6 @@
 }
 
 .artist-image {
-    padding-top: 20px;
     width: 160px; /* Set the width of the artist image */
     height: 160px; /* Set the height of the artist image */
     object-fit: cover; /* Crop the image instead of stretching it */
@@ -65,7 +65,6 @@
     color: #ffffff;
     text-align: center;
     margin: 0;
-    padding-bottom: 30px;
 }
 
 .artist-list {

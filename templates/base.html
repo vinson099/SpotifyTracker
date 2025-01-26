@@ -13,10 +13,10 @@
         </div>
         <nav>
             <ul class="nav-tabs">
-                <li><a href="/" class="active">Home</a></li>
-                <li><a href="/top_songs">Top Songs</a></li>
-                <li><a href="/top_artists">Top Artists</a></li>
-                <li><a href="/Social">Top Genres</a></li>
+                <li><a href="{{ url_for('home') }}" class="{% if request.endpoint == 'home' %}active{% endif %}">Home</a></li>
+                <li><a href="{{ url_for('top_songs') }}" class="{% if request.endpoint == 'top_songs' %}active{% endif %}">Top Songs</a></li>
+                <li><a href="{{ url_for('top_artists') }}" class="{% if request.endpoint == 'top_artists' %}active{% endif %}">Top Artists</a></li>
+                <li><a href="{{ url_for('top_genres') }}" class="{% if request.endpoint == 'top_genres' %}active{% endif %}">Top Genres</a></li>
             </ul>
         </nav>
     </header>
