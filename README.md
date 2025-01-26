@@ -1,3 +1,4 @@
 WIP Spotify Tracker 
+![image](https://github.com/user-attachments/assets/2996e1e4-0995-496e-8646-806740a70c9f)
 ![image](https://github.com/user-attachments/assets/958c305d-fd7b-438c-93dd-755a3d7f49b5)
-![image](https://github.com/user-attachments/assets/70e965c5-03d3-458b-96e5-ed26cee49e33)
+
