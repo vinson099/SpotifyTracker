@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/top_songs.css') }}">
 </head>
 <body>
-    <h1 class = "page_title">Top Tracks From...</h1>
+    <h1 class = "page-title">Top Tracks From...</h1>
     <div class="tabs">
         <button class="tablink" onclick="openTab(event, 'ShortTerm')">Last 4 Weeks</button>
         <button class="tablink" onclick="openTab(event, 'MediumTerm')">Last 6 Months</button>
@@ -16,7 +16,7 @@
     </div>
 
     <div id="ShortTerm" class="tabcontent">
-        <table class="track_table">
+        <table class="track-table">
             <tbody>
                 {% for track in short_term_tracks %}
                 <tr>
@@ -36,7 +36,7 @@
     </div>
 
     <div id="MediumTerm" class="tabcontent">
-        <table class="track_table">
+        <table class="track-table">
             <tbody>
                 {% for track in medium_term_tracks %}
                 <tr>
@@ -56,7 +56,7 @@
     </div>
 
     <div id="LongTerm" class="tabcontent">
-        <table class="track_table">
+        <table class="track-table">
             <tbody>
                 {% for track in long_term_tracks %}
                 <tr>
